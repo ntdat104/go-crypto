@@ -22,7 +22,7 @@ const App = () => {
     const [responseCopyStatus, setResponseCopyStatus] = useState('');
 
     // Base URL for your Go backend
-    const BASE_URL = 'http://localhost:8080/api/crypto';
+    const BASE_URL = 'https://go-crypto-production.up.railway.app/api/crypto';
 
     // Define all API endpoints and their required/optional parameters with descriptions
     const apiEndpoints = {
