@@ -1,0 +1,908 @@
+{
+	"info": {
+		"_postman_id": "YOUR_COLLECTION_ID_HERE",
+		"name": "Go Crypto Binance API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_collection_link": "https://www.postman.com/collections/YOUR_COLLECTION_ID_HERE"
+	},
+	"item": [
+		{
+			"name": "Binance Spot API",
+			"item": [
+				{
+					"name": "Ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/ping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Server Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/exchangeInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"exchangeInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticker Price (Single Symbol)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/ticker/price?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"ticker",
+								"price"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for the ticker price (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Ticker Prices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/ticker/allPrices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"ticker",
+								"allPrices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Ticker (Single Symbol)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/bookTicker?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"bookTicker"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for the book ticker (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Depth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/depth?symbol=BTCUSDT&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"depth"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for market depth (e.g., BTCUSDT)"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Limit the number of entries (default: 10)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent Trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/trades?symbol=BTCUSDT&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"trades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for recent trades (e.g., BTCUSDT)"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Limit the number of trades (default: 10)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Klines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/klines?symbol=BTCUSDT&interval=1h&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"klines"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for klines (e.g., BTCUSDT)"
+								},
+								{
+									"key": "interval",
+									"value": "1h",
+									"description": "Kline interval (e.g., 1m, 5m, 1h, 1d)"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Limit the number of klines (default: 10)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historical Trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/historicalTrades?symbol=BTCUSDT&limit=500&fromId=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"historicalTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for historical trades (e.g., BTCUSDT)"
+								},
+								{
+									"key": "limit",
+									"value": "500",
+									"description": "Limit the number of trades (default: 500)"
+								},
+								{
+									"key": "fromId",
+									"value": "",
+									"description": "Trade ID to fetch from (optional)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aggregate Trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/aggregateTrades?symbol=BTCUSDT&limit=500&fromId=&startTime=&endTime=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"aggregateTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for aggregate trades (e.g., BTCUSDT)"
+								},
+								{
+									"key": "fromId",
+									"value": "",
+									"description": "Trade ID to fetch from (optional)",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "",
+									"description": "Timestamp in milliseconds (optional)",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "",
+									"description": "Timestamp in milliseconds (optional)",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "500",
+									"description": "Limit the number of trades (default: 500)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Average Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/avgPrice?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"avgPrice"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for average price (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "24hr Ticker (Single Symbol)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/ticker/24hr?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"ticker",
+								"24hr"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for 24hr ticker (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Book Tickers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/bookTicker/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"bookTicker",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Binance Futures API",
+			"item": [
+				{
+					"name": "Futures Ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/ping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Exchange Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/exchangeInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"exchangeInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Depth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/depth?symbol=BTCUSDT&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"depth"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for market depth (e.g., BTCUSDT)"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Limit the number of entries (default: 10)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Aggregate Trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/aggTrades?symbol=BTCUSDT&limit=500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"aggTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for aggregate trades (e.g., BTCUSDT)"
+								},
+								{
+									"key": "limit",
+									"value": "500",
+									"description": "Limit the number of trades (default: 500)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Ticker Price (Single Symbol)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/ticker/price?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"ticker",
+								"price"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for the ticker price (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures All Ticker Prices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/ticker/allPrices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"ticker",
+								"allPrices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Book Ticker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/bookTicker?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"bookTicker"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for the book ticker (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Klines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/klines?symbol=BTCUSDT&interval=1h&limit=500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"klines"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for klines (e.g., BTCUSDT)"
+								},
+								{
+									"key": "interval",
+									"value": "1h",
+									"description": "Kline interval (e.g., 1m, 5m, 1h, 1d)"
+								},
+								{
+									"key": "limit",
+									"value": "500",
+									"description": "Limit the number of klines (default: 500)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Mark Price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/markPrice?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"markPrice"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for mark price (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures All Force Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/allForceOrders?symbol=BTCUSDT&limit=500&autoCloseType=&startTime=&endTime=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"allForceOrders"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for force orders (e.g., BTCUSDT)"
+								},
+								{
+									"key": "autoCloseType",
+									"value": "",
+									"description": "Auto close type (optional)",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "",
+									"description": "Timestamp in milliseconds (optional)",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "",
+									"description": "Timestamp in milliseconds (optional)",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "500",
+									"description": "Limit the number of orders (default: 500)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures 24hr Ticker (Single Symbol)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/24hrTicker?symbol=BTCUSDT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"24hrTicker"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for 24hr ticker (e.g., BTCUSDT)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures All 24hr Tickers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/all24hrTickers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"all24hrTickers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Funding Rate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/fundingRate?symbol=BTCUSDT&limit=100&startTime=&endTime=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"fundingRate"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for funding rate (e.g., BTCUSDT)"
+								},
+								{
+									"key": "startTime",
+									"value": "",
+									"description": "Timestamp in milliseconds (optional)",
+									"disabled": true
+								},
+								{
+									"key": "endTime",
+									"value": "",
+									"description": "Timestamp in milliseconds (optional)",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "100",
+									"description": "Limit the number of entries (default: 100)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Futures Recent Trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/crypto/futures/recentTrades?symbol=BTCUSDT&limit=500&fromId=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"crypto",
+								"futures",
+								"recentTrades"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "BTCUSDT",
+									"description": "Symbol for recent trades (e.g., BTCUSDT)"
+								},
+								{
+									"key": "limit",
+									"value": "500",
+									"description": "Limit the number of trades (default: 500)"
+								},
+								{
+									"key": "fromId",
+									"value": "",
+									"description": "Trade ID to fetch from (optional)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
